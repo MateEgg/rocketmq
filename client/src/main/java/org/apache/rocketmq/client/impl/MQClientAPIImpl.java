@@ -500,6 +500,14 @@ public class MQClientAPIImpl {
         final long timeoutMillis,
         final RemotingCommand request
     ) throws RemotingException, MQBrokerException, InterruptedException {
+
+        // TODO: 2020-04-22  RocketMq 通信模块
+        // eg:
+        // addr: 192.168.1.51:10911
+        // request: RemotingCommand [code=310, language=JAVA, version=353, opaque=7, flag(B)=0, remark=null, extFields={a=please_rename_unique_group_name, b=TopicTest, c=TBW102, d=4, e=2, f=0, g=1587542404667, h=0, i=UNIQ_KEYC0A80133D09918B4AAC26F94863A0000WAITtrueTAGSTagA, j=0, k=false, m=false}, serializeTypeCurrentRPC=JSON]
+        // timeoutMillis: 1181
+
+
         RemotingCommand response = this.remotingClient.invokeSync(addr, request, timeoutMillis);
         assert response != null;
         return this.processSendResponse(brokerName, msg, response);

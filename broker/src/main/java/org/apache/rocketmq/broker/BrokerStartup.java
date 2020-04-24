@@ -48,6 +48,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.apache.rocketmq.remoting.netty.TlsSystemConfig.TLS_ENABLE;
 
+/**
+ * pro : -c /Users/mac/workspace/rocketmq-all/namesrv/src/main/java/org/apache/rocketmq/namesrv/conf/broker.conf  autoCreateTopicEnable=true
+ *
+ * emv : ROCKETMQ_HOME=/Users/mac/workspace/rocketmq-all/namesrv/src/main/java/org/apache/rocketmq/namesrv
+ */
 public class BrokerStartup {
     public static Properties properties = null;
     public static CommandLine commandLine = null;
